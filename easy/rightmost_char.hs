@@ -1,3 +1,5 @@
+import           Data.List
+
 main :: IO ()
 main = do
   putStrLn "Finding position of rightmost character in a string...."
@@ -9,6 +11,7 @@ main = do
   print (rightmostPosition str1 'l')
   putStr ("\nPosition of rightmost 'e' in '" ++ str2 ++ "': ")
   print (rightmostPosition str2 'e')
+  print $ last $ 'e' `elemIndices` str2
 
 rightmostPosition :: String -> Char -> Int
 rightmostPosition [] _ = -1

@@ -1,3 +1,5 @@
+import           Data.List (nub)
+
 main :: IO ()
 main = do
   putStrLn "Removing duplicate elements from list."
@@ -10,6 +12,8 @@ main = do
   putStrLn "Removed duplicates"
   print (uniqueList list2)
   putStrLn "Done"
+  print list2
+  print (nub list2)
 
 uniqueList :: [Int] -> [Int]
 uniqueList [] = []
